@@ -9,7 +9,7 @@ scaler=pickle.load(open("scaler.pkl","rb"))
 
 @app.route('/',methods=['GET'])
 def awal():
-    return render_template('index.html')
+    return "Flask Vercel Example - Hello World", 200
 
 @app.route('/contacts',methods=['GET'])
 def contacts():
