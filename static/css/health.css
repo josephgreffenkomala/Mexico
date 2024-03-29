@@ -1,0 +1,664 @@
+:root{
+    --black: #16151D;
+    --red: #D51E0B;
+    --green: #34685C;
+    --blue: #264653;
+    --orange: #EF7401;
+    --white: #ECF0F3;
+    --sc-10: #fff;
+    --body-2-product-sans-bold: Inter;
+
+     /* font sizes */
+     --display-3-size: 36px;
+     --display-1-size: 57px;
+     --headline-2-size: 28px;
+     --body-2-product-sans-bold-size: 12px;
+     --headline-3-size: 24px;
+     --headline-1-bold-size: 32px;
+     --title-1-size: 22px;
+    
+    /* Gaps */
+    --gap-7xs: 6px;
+    --gap-5xs: 8px;
+  
+    /* Paddings */
+    --padding-3xs: 10px;
+    --padding-7xs: 6px;
+    --padding-5xs: 8px;
+  
+    /* Border radiuses */
+    --br-5xs: 8px;
+  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif ;
+    background-color: var(--black);
+    margin: 0;
+    line-height: normal;
+}
+
+:-webkit-scrollbar{
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--black);
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#34685C, #264653);
+    border-radius: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+    padding: 2rem;
+    padding-left: 6%;
+    background-color: var(--black);
+    box-shadow: 1px 4px 30px;
+}
+
+.navbar .navbar-logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.Me{
+    color: var(--red);
+}
+
+.xi{
+    color: var(--green);
+}
+
+.co{
+    color: var(--orange);
+}
+
+.navbar .navbar-nav{
+    margin-left: 20%;
+}
+
+.navbar .navbar-nav a{
+    color: var(--white);
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.3rem;
+    border-bottom: 0.01rem solid var(--white);
+    transform: scaleX(0);
+    transition: 0.3s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(0.7);
+}
+
+.navbar .navbar-extra{
+    margin-right: 3%;
+}
+
+.navbar .navbar-extra a{
+    color: var(--white);
+}
+
+#hamburger-menu{
+    display: none;
+}
+
+
+.main{
+  position: relative;
+  min-height: 100vh;
+}
+
+.whats-your-health-container {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    line-height: 120%;
+    font-weight: 500;
+    font-family: inherit;
+  }
+  .fill-the-question-and-well-d-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs);
+    font-size: var(--display-3-size);
+  }
+  .frame,
+  .whats-your-health-status-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .frame {
+    position: absolute;
+    top: 0;
+    left: 246px;
+    width: 792px;
+    overflow: hidden;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .frame-child {
+    width: 20px;
+    position: relative;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    box-sizing: border-box;
+    height: 20px;
+  }
+  .ellipse-parent {
+    gap: 12px;
+  }
+  .ellipse-group,
+  .ellipse-parent,
+  .frame-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .ellipse-group {
+    gap: var(--gap-7xs);
+  }
+  .frame-group {
+    gap: 101px;
+  }
+  .frame1 {
+    position: absolute;
+    top: 163px;
+    left: 440px;
+    width: 404px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: var(--headline-1-bold-size);
+  }
+  .state {
+    align-self: stretch;
+    position: relative;
+    font-size: var(--headline-3-size);
+    line-height: 120%;
+    font-family: var(--display-3);
+  }
+
+  #name{
+    width: 100rem;
+    height: 2rem;
+  }
+
+  .icon-pencil {
+    width: 12px;
+    position: relative;
+    height: 12px;
+    object-fit: cover;
+  }
+  .state1 {
+    flex: 1;
+    position: relative;
+    line-height: 140%;
+  }
+
+  .inputs {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .input-field {
+    align-self: stretch;
+    border-radius: var(--br-5xs);
+    background-color: var(--sc-10);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25) inset;
+    border: 1px solid var(--white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--padding-7xs) var(--padding-5xs);
+    gap: var(--gap-5xs);
+    color: var(--n-9);
+    height: 2.5rem;
+    width: 56rem;
+  }
+  .state2 {
+    width: 188px;
+    position: relative;
+    line-height: 140%;
+    display: none;
+  }
+  
+  .input-master,
+  .inputs {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .input-master {
+    gap: var(--gap-7xs);
+  }
+  .inputs {
+    padding: var(--padding-3xs);
+  }
+  .icon-pencil7 {
+    width: 12px;
+    position: relative;
+    height: 12px;
+  }
+  .frame2,
+  .inputs-parent {
+    width: 869px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .frame2 {
+    position: absolute;
+    top: 232px;
+    left: 179px;
+    width: 926px;
+    overflow: hidden;
+    justify-content: center;
+    font-size: var(--body-2-product-sans-bold-size);
+    font-family: var(--body-2-product-sans-bold);
+  }
+  .being-never-5,
+  .scale-0-5 {
+    position: relative;
+    line-height: 120%;
+  }
+  .being-never-5 {
+    font-size: var(--headline-3-size);
+    font-weight: 500;
+  }
+  .frame-container,
+  .frame3,
+  .scale-0-5-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .scale-0-5-parent {
+    padding: 0 var(--padding-3xs);
+    gap: 5px;
+    font-size: var(--headline-1-bold-size);
+    font-family: var(--display-3);
+  }
+  .frame-container,
+  .frame3 {
+    width: 870px;
+  }
+  .frame3 {
+    position: absolute;
+    top: 593px;
+    left: 180px;
+    width: 908px;
+    overflow: hidden;
+    justify-content: center;
+    font-size: var(--body-2-product-sans-bold-size);
+    font-family: var(--body-2-product-sans-bold);
+  }
+  .button-generate {
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    position: relative;
+    color: var(--white);
+    background-color: var(--green);
+    padding: 1.5rem 25rem;
+  }
+
+  .frame4 {
+    position: absolute;
+    top: 954px;
+    left: 14.5%;
+    width: 906px;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    font-size: var(--headline-2-size);
+    color: var(--sc-10);
+  }
+  .check-the-over-health {
+    margin: 0;
+    position: relative;
+    font-size: inherit;
+    line-height: 120%;
+    font-weight: 500;
+    font-family: inherit;
+    white-space: pre-wrap;
+  }
+  .frame-inner {
+    position: absolute;
+    top: 0;
+    left: 217px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-3xs);
+  }
+  .component-3-child,
+  .component-3-item {
+    position: absolute;
+    height: 100%;
+    width: 44.29%;
+    top: 0;
+    right: 55.71%;
+    bottom: 0;
+    left: 0;
+    background-color: var(--mexico-green);
+  }
+  .component-3-item {
+    height: 61.9%;
+    top: 38.1%;
+    right: 0;
+    left: 55.71%;
+    background-color: var(--mexico-blue);
+  }
+  .component-3 {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 140px;
+    height: 210px;
+  }
+  .frame6 {
+    width: 1005px;
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .frame-parent,
+  .frame5 {
+    position: absolute;
+    width: 1284px;
+  }
+  .frame5 {
+    top: 1110px;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .frame-parent {
+    top: 134px;
+    left: 8rem;
+    height: 1330px;
+    text-align: left;
+    font-size: var(--display-1-size);
+    color: var(--white);
+    font-family: var(--display-3);
+  }
+  .quiz-health-hifi {
+    width: 100%;
+    position: relative;
+    background-color: var(--mexico-black);
+    height: 1939px;
+    overflow: hidden;
+  }
+  
+  footer{
+    position: relative;
+    bottom: 0;
+    margin-top: 50rem;
+    background-color: var(--red);
+    color: var(--white);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+footer .foot{
+    display: flex;
+    margin-left: 4rem;
+    margin-right: 6rem;
+}
+
+footer .foot h3{
+    font-size: 2.5rem;
+    text-wrap: nowrap;
+    margin-right: 9rem;
+    margin-top: 12rem;
+}
+footer .foot .we{
+    list-style-type: none;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+
+footer .foot .we li a{
+    display: flex;
+    color: var(--white);
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: 0.3s;
+}
+
+footer .foot .we li a:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+@media (max-width : 1366px) {
+  html{
+    font-size: 85%;
+  }
+
+}
+@media (max-width : 768px) {
+  html{
+    font-size: 60%;
+  }
+
+  .navbar .navbar-nav{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #264653; 
+    width: 25rem;
+    height: 60vh;
+    box-shadow: -4px 5px 50px;
+    transition: 0.4s;
+  }
+  
+  .navbar .navbar-nav.active{
+    right: 0;
+  }
+  
+  .navbar .navbar-nav a{
+    display: block;
+    margin: 2.5rem;
+    padding: 0.1rem;
+    font-size: 1.7rem;
+  }
+  
+  .navbar .navbar-nav a::after{
+    transform-origin: 0 0;
+  }
+
+  .main{
+    margin-left: -22rem;
+  }
+
+  .whats-your-health-container{
+    font-size: 3.4rem;
+    margin-bottom: -1rem;
+    margin-left: -1rem;
+  }
+  .frame1{
+    margin-top: -6rem;
+    margin-left: -4rem;
+  }
+  .frame-group{
+    font-size: 2rem;
+  }
+
+  .frame2{
+    margin-top: -8rem;
+  }
+
+  .frame4{
+    margin-top: -10rem;
+    left: 0.5%;
+  }
+
+  .button-generate{
+    margin-left: 11rem;
+    padding: 1.5rem 31rem;
+  }
+
+  .frame-inner{
+    left: 8%;
+  }
+
+  .frame5{
+    margin-top: -15rem;
+  }
+
+  .state{
+    font-size: 2.2rem;
+  }
+
+  .input-field{
+    width: 68rem;
+    height: 4rem;
+  }
+  footer .foot .we li a{
+    font-size: 1.2rem;
+}
+
+}
+  @media (max-width : 450px) {
+    html{
+      font-size: 55%;
+    }
+  
+    .main{
+    margin-left: -24rem;
+    margin-top: -5rem;
+  }
+
+  .frame{
+    margin-left: -9.5rem;
+  }
+  .whats-your-health-container{
+    font-size: 2rem;
+    margin-bottom: -1rem;
+    margin-left: -1rem;
+  }
+  .frame1{
+    margin-top: -6rem;
+    margin-left: -23rem;
+  }
+  .frame-group{
+    gap: var(--display-3-size);
+    font-size: 1.5rem;
+  }
+
+  .frame2{
+    margin-top: -9rem;
+    margin-left: -3rem;
+  }
+
+  .frame4{
+    margin-top: -30rem;
+    left: -3%;
+  }
+
+  .button-generate{
+    margin-left: -24rem;
+    padding: 1.5rem 13.5rem;
+  }
+
+  .frame-inner{
+    left: 8%;
+  }
+
+  .frame-inner .whats-your-health-status-parent .whats-your-health-container {
+    font-size: 2rem;
+  }
+
+  .frame-inner .whats-your-health-status-parent .fill-the-question-and-well-d-wrapper h3{
+    font-size: 2rem;
+  }
+
+  .frame5{
+    margin-top: -34rem;
+  }
+
+  .state{
+    font-size: 1.5rem;
+  }
+
+  .scale-0-5-parent, 
+  .being-never-5{
+    font-size: 2rem;
+  }
+
+  .input-field{
+    width: 33rem;
+    height: 3rem;
+  }
+
+  footer {
+    margin-top: 20rem;
+  }
+
+  footer .foot{
+    display: inline;
+  }
+  
+  footer .foot h3{
+    margin-left: 4rem;
+    margin-top: 4rem;
+  }
+  
+  footer .foot .we {
+    margin-left: 4rem;
+  }
+  
+  footer .foot .we li a{
+    font-size: 1.8rem;
+  }
+}

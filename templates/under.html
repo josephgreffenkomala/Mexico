@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimenta Mexico</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/under.css')}}">
+</head>
+<body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+        <a href="/" class="navbar-logo">#Alimenta<span class="Me">Me</span><span class="xi">xi</span><span class="co">co</span></a>
+
+        <div class="navbar-nav">
+            <a href="over">For Over-Health Bar</a>
+            <a href="under">For Under-Health Bar</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Main start -->
+    <section class="hero">
+        <div class="title-page">
+            <h1>For <span class="xi">Under</span><span class="Me">-Health Bar</span></h1>
+            <h3>you are under the health bar; <span class="co">less smoking, less sugar, les calorie intake suggested</span></h3>
+        </div>
+        <div class="second-area">
+            <div class="recommend">
+                <h3>Eating Schedule</h3>
+                <div class="time-card">
+                    <div class="time1">7.00 PM</div>
+                    <div class="time2">7.00 PM</div>
+                    <div class="time3">7.00 PM</div>
+                </div>
+            </div>
+            <div class="image1"><img src="{{url_for('static',filename='assets/img/Component2.svg')}}" alt=""></div>
+        </div>
+    </section>
+    <section class="recipe">
+        <h2 class="title-recipe">Healthier Alternatives</h2>
+        <div class="cards">
+            <div class="menu">
+                <img src="{{url_for('static',filename='assets/img/food-card.png')}}" alt="" class="image-food">
+                <h3 class="food">Cabbage Burritos</h3>
+                <p class="info">656g Calories</p>
+                <p class="info">6g Sugars</p>
+                <a href="menu" class="button-recipe">See Recipe</a>
+            </div>
+            <div class="menu">
+                <img src="{{url_for('static',filename='assets/img/food-card.png')}}" alt="" class="image-food">
+                <h3 class="food">Cabbage Burritos</h3>
+                <p class="info">656g Calories</p>
+                <p class="info">6g Sugars</p>
+                <a href="menu" class="button-recipe">See Recipe</a>
+            </div>
+            <div class="menu">
+                <img src="{{url_for('static',filename='assets/img/food-card.png')}}" alt="" class="image-food">
+                <h3 class="food">Cabbage Burritos</h3>
+                <p class="info">656g Calories</p>
+                <p class="info">6g Sugars</p>
+                <a href="menu" class="button-recipe">See Recipe</a>
+            </div>
+            <div class="menu">
+                <img src="{{url_for('static',filename='assets/img/food-card.png')}}" alt="" class="image-food">
+                <h3 class="food">Cabbage Burritos</h3>
+                <p class="info">656g Calories</p>
+                <p class="info">6g Sugars</p>
+                <a href="menu" class="button-recipe">See Recipe</a>
+            </div>
+            <div class="menu">
+                <img src="{{url_for('static',filename='assets/img/food-card.png')}}" alt="" class="image-food">
+                <h3 class="food">Cabbage Burritos</h3>
+                <p class="info">656g Calories</p>
+                <p class="info">6g Sugars</p>
+                <a href="menu" class="button-recipe">See Recipe</a>
+            </div>
+        </div>
+    </section>
+    <section class="notes-landing">
+            <h3 class="tittle-note">Additional Note</h3>
+            <textarea name="notes" id="#note" cols="100" rows="20" class="note"></textarea>
+    </section>
+    <section class="contact">
+        <h2>Contact Food Health Proffesional</h2>
+        <p>if you have questions, worries, or concerns, feel free to contact </p>
+        <a href="contacts">Contact Here</a>
+    </section>
+    <!-- Main End -->
+
+    <!-- Footer start -->
+    <footer>
+        <div class="foot">
+            <h3>About Us</h3>
+            <div class="we">
+                <li><a href="https://www.linkedin.com/in/satwika-wandhana-0a43a02b0/">Satwika Nino Wandhana - CyberSecurity</a></li>
+                <li><a href="https://www.linkedin.com/in/kenbimasatriagandasasmita/">Ken Bima Satria Gandasasmita - UI/UX</a></li>
+                <li><a href="https://www.linkedin.com/in/wibi-laksono-wijaya-4139672b6/">Wibi Laksono Wijaya - Front End</a></li>
+                <li><a href="https://www.linkedin.com/in/joseph-greffen-komala-ab1848293/">Joseph Greffen Komala - DSAI</a></li>
+                <li><a href="http://www.linkedin.com/in/mutiara-setya-rini">Mutiara Setyarini - GameDev</a></li>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script>
+        feather.replace();
+      </script>
+
+      <script src="{{url_for('static',filename='js/script.js')}}"></script>
+</body>
+</html>

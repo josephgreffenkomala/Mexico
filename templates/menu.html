@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimenta Mexico</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/menu.css')}}">
+</head>
+<body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+        <a href="/" class="navbar-logo">#Alimenta<span class="Me">Me</span><span class="xi">xi</span><span class="co">co</span></a>
+
+        <div class="navbar-nav">
+            <a href="over">For Over-Health Bar</a>
+            <a href="under">For Under-Health Bar</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Main start -->
+    <a href="/" class="back"><i data-feather="arrow-left"></i></a>
+    <section class="recipe">
+        <img src="{{url_for('static',filename='assets/img/Ellipse10.png')}}" alt="" class="ellipse">
+        <div class="food-menu">
+            <div><img src="{{url_for('static',filename='assets/img/food.png')}}" alt="" class="nachos-image"></div>
+            <div class="right-menu">
+                <div class="tittle-menu"><h2>Taco Salad</h2></div>
+                <div class="ingredients">
+                    <h3 class="tittle-info">Ingredients</h3>
+                    <div class="info-ingdns">
+                        <li>1lb ground beef</li>
+                        <li>Kosher salt</li>
+                        <li>2 tbsp tomato paste</li>
+                        <li>3 cups vegetable oil</li>
+                        <li>2 corn tortillas</li>
+                        <li>2 chopped romaine</li>
+                        <li>2.5 cherry tomatoes</li>
+                        <li>15 oz can black beans</li>
+                        <li>1 cup shred cheese</li>
+                    </div>
+                </div>
+                <div class="prices">
+                    <h3 class="tittle-info">Prices</h3>
+                    <div class="info-prices">
+                        <li>$20 per portion ($ = mxn currency symbol)</li>
+                        <li>4 Serving per size</li>
+                    </div>
+                </div>
+            </div>
+            <div class="nutrition">
+                <h3 class="tittle-info">Nutrition Fact</h3>
+                <div class="info-nutr">
+                    <li>520 Calories</li>
+                    <li>26g Total Fat</li>
+                    <li>108mg Cholesterol</li>
+                    <li>1289mg Sodium</li>
+                    <li>1449mg Potassium</li>
+                    <li>39g Total Carbohydrate</li>
+                    <li>12g Dietary Fiber</li>
+                    <li>6g Sugars</li>
+                    <li>38g Protein</li>
+                </div>
+            </div>
+            <div class="steps">
+                <h3 class="tittle-info">Steps</h3>
+                <div class="info-stps">
+                    <li>In a large cast-iron skillet over medium-high heat, cook beef, breaking up ...</li>
+                    <li>In another skillet, pour oil to a depth of 1/2”. Heat over medium-high heat ...</li>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Main End -->
+
+    <!-- Footer start -->
+    <footer>
+        <div class="foot">
+            <h3>About Us</h3>
+            <div class="we">
+                <li><a href="https://www.linkedin.com/in/satwika-wandhana-0a43a02b0/">Satwika Nino Wandhana - CyberSecurity</a></li>
+                <li><a href="https://www.linkedin.com/in/kenbimasatriagandasasmita/">Ken Bima Satria Gandasasmita - UI/UX</a></li>
+                <li><a href="https://www.linkedin.com/in/wibi-laksono-wijaya-4139672b6/">Wibi Laksono Wijaya - Front End</a></li>
+                <li><a href="https://www.linkedin.com/in/joseph-greffen-komala-ab1848293/">Joseph Greffen Komala - DSAI</a></li>
+                <li><a href="http://www.linkedin.com/in/mutiara-setya-rini">Mutiara Setyarini - GameDev</a></li>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script>
+        feather.replace();
+      </script>
+
+      <script src="{{url_for('static',filename='js/script.js')}}"></script>
+</body>
+</html>

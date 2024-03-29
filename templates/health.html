@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimenta Mexico</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link type= "text/css" rel="stylesheet" href="{{url_for('static',filename='css/health.css')}}"><!-- ini diubah-->
+</head>
+<body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+        <a href="/" class="navbar-logo">#Alimenta<span class="Me">Me</span><span class="xi">xi</span><span class="co">co</span></a>
+
+        <div class="navbar-nav">
+            <a href="over">For Over-Health Bar</a>
+            <a href="under">For Under-Health Bar</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+     <!-- BIG TITTLE -->
+    <section class="main">
+      <section class="frame-parent">
+        <div class="frame">
+          <div class="whats-your-health-status-parent">
+            <h1 class="whats-your-health-container">
+              <span>What’s Your</span>
+              <span class="co"> Health Status?</span>
+            </h1>
+            <div class="fill-the-question-and-well-d-wrapper">
+              <h3 class="whats-your-health-container">
+                fill the question, and we’ll determine
+              </h3>
+            </div>
+          </div>
+        </div>
+    <form action="/predict" method="post">
+      
+        <div class="frame1">
+          <div class="frame-group">
+            <div class="ellipse-parent">
+              <input type="radio" id="html" name="Gender" value="1">
+              <label for="html">Male</label>
+            </div>
+            <div class="ellipse-group">
+              <input type="radio" id="html" name="Gender" value="0">
+              <label for="html">Female</label>
+            </div>
+          </div>
+        </div>
+
+      <div class="frame2">
+          <div class="inputs-parent">
+            <div class="inputs">
+              <div class="input-master">
+                <b class="state">Age</b>
+                <div class="input-field">
+                  <a href="#" id="pencil-menu"><i data-feather="edit-2"></i></a>
+                  <input type="number" id="name" name="age" placeholder="Input Age"required />
+                </div>
+                <b class="state2">Helper Text</b>
+              </div>
+            </div>
+            <div class="inputs">
+              <div class="input-master">
+                <b class="state">Height(cm)</b>
+                <div class="input-field">
+                  <a href="#" id="pencil-menu"><i data-feather="edit-2"></i></a>
+                  <input type="number" id="name" name="Height" placeholder="Input Height" required/>
+                </div>
+                </div>
+                </div>
+                <div class="inputs">
+                  <div class="input-master">
+                    <b class="state">Weight(Kg)</b>
+                    <div class="input-field">
+                      <a href="#" id="pencil-menu"><i data-feather="edit-2"></i></a>
+                      <input type="number" id="name" name="Weight" placeholder="Weight"required />
+                    </div>
+                    <b class="state2">Helper Text</b>
+                  </div>
+                </div>
+
+                <div class="inputs">
+                  <div class="input-master">
+                    <b class="state">Do you have history obesity in your family?(0, if u dont have | 1, if u have)</b>
+                    <div class="input-field">
+                      <a href="#" id="pencil-menu"><i data-feather="edit-2"></i></a>
+                      <input type="numbers"  id="name" name="family_history_with_overweight" placeholder="Input" required/>
+                    </div>
+                <b class="state2">Helper Text</b>
+              </div>
+            </div>
+
+            <div class="inputs">
+              <div class="input-master">
+                <b class="state">How Many Eat per Day</b>
+                <div class="input-field">
+                  <a href="#" id="pencil-menu"><i data-feather="edit-2"></i></a>
+                  <input type="number" id="name" name="NCP" placeholder="Input Eat Per Day" required />
+                </div>
+                <b class="state2">Helper Text</b>
+              </div>
+            </div>
+          </div>
+        
+          <div class="frame-container">
+            <div class="scale-0-5-parent">
+              <b class="scale-0-5">Scale 0-3</b>
+              <div class="being-never-5">(0 being never, 3 being often)</div>
+            </div>
+          </div>
+
+            <div class="inputs">
+              <div class="input-master">
+                <b class="state">Food Between Meals</b>
+                <div class="input-field">
+                  <a href="#" id="pencil-menu"><i data-feather="edit-2"></i></a>
+                  <input type="number" id="name" name="CAEC" placeholder="0-3" required/>
+                </div>
+                <b class="state2">Helper Text</b>
+              </div>
+            </div>
+
+            <div class="inputs">
+              <div class="input-master">
+                <b class="state">Physical Activity</b>
+                <div class="input-field">
+                  <a href="#" id="pencil-menu"><i data-feather="edit-2"></i></a>
+                  <input type="number" id="name" name="FAF" placeholder="0-3" required />
+                </div>
+                <b class="state2">Helper Text</b>
+              </div>
+            </div>
+          </div>
+        <div class="frame4">
+          <div class="component-1">
+            <div class="button">
+              <button type = "submit" class="button-generate" > Generate</button>
+            </div>
+          </div>
+        </div>
+    </form>
+        <div class="frame5">
+          <div class="frame6">
+            <div class="frame-inner">
+              <div class="whats-your-health-status-parent">
+                <h1 class="whats-your-health-container">
+                  <span>You Are </span>
+                  <span class="me">
+                    {% autoescape off %}
+                    {{ prediksi }}
+                    {% endautoescape %}
+                  </span>
+                </h1>
+                <div class="fill-the-question-and-well-d-wrapper">
+                  <h3 class="check-the-over-health">
+                    check the navigation section
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="component-3">
+              <div class="component-3-child"></div>
+              <div class="component-3-item"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+<!-- Footer start -->
+<footer>
+  <div class="foot">
+      <h3>About Us</h3>
+      <div class="we">
+          <li><a href="https://www.linkedin.com/in/satwika-wandhana-0a43a02b0/">Satwika Nino Wandhana - CyberSecurity</a></li>
+          <li><a href="https://www.linkedin.com/in/kenbimasatriagandasasmita/">Ken Bima Satria Gandasasmita - UI/UX</a></li>
+          <li><a href="https://www.linkedin.com/in/wibi-laksono-wijaya-4139672b6/">Wibi Laksono Wijaya - Front End</a></li>
+          <li><a href="https://www.linkedin.com/in/joseph-greffen-komala-ab1848293/">Joseph Greffen Komala - DSAI</a></li>
+          <li><a href="http://www.linkedin.com/in/mutiara-setya-rini">Mutiara Setyarini - GameDev</a></li>
+      </div>
+  </div>
+</footer>
+<!-- Footer End -->
+
+
+<script>
+  feather.replace();
+</script>
+
+<script src="{{url_for('static',filename='js/script.js')}}"></script>
+</body>
+</html>
+
+

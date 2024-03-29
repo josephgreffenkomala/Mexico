@@ -1,0 +1,610 @@
+:root{
+    --black: #16151D;
+    --red: #D51E0B;
+    --green: #34685C;
+    --blue: #264653;
+    --orange: #EF7401;
+    --white: #ECF0F3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif ;
+    background-color: var(--black);
+
+}
+
+::-webkit-scrollbar{
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--black);
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#34685C, #264653);
+    border-radius: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+    padding: 2rem;
+    padding-left: 6%;
+    background-color: var(--black);
+    box-shadow: 1px 4px 30px;
+}
+
+.navbar .navbar-logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.Me{
+    color: var(--red);
+}
+
+.xi{
+    color: var(--green);
+}
+
+.co{
+    color: var(--orange);
+}
+
+.navbar .navbar-nav{
+    margin-left: 20%;
+}
+
+.navbar .navbar-nav a{
+    color: var(--white);
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    margin: 0 0.6rem;
+}
+
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.3rem;
+    border-bottom: 0.01rem solid var(--white);
+    transform: scaleX(0);
+    transition: 0.3s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(0.7);
+}
+
+.navbar .navbar-extra{
+    margin-right: 3%;
+}
+
+.navbar .navbar-extra a{
+    color: var(--white);
+}
+
+#hamburger-menu{
+    display: none;
+}
+
+.hero {
+    padding-top: 8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero .Title{
+    margin-right: 50rem;
+    margin-left: 4rem;
+    /* background-color: var(--orange); */
+}
+
+.hero .Title h1{
+    color: var(--white);
+    font-size:  6rem;
+    font-weight: 300;
+}
+
+.hero .hero-right{
+    display: flex;
+    align-items: center;
+}
+
+.hero .hero-right .image1{
+    margin-top: -25rem;
+    margin-left: -220%;
+    height: 1rem;
+    z-index: -999;
+}
+
+.hero .hero-right .button-health{
+    margin-top: 20rem;
+    margin-right: 10rem;
+    margin-left: -30rem;
+    height: 1rem;
+    line-height: 4rem;
+
+}
+.hero .hero-right .button-health p{
+    color: var(--white);
+    font-size: 1.6rem;
+    font-weight: 100;
+
+
+}
+
+.hero .hero-right .button-health a{
+    color: var(--white);
+    background-color: var(--green);
+    border-radius: 0.4rem;
+    font-size: 1.5rem;
+    padding: 0.6rem 3rem;
+    transition: 0.3s;
+}
+
+.hero .hero-right .button-health a:hover{
+    background-color: var(--blue);
+    box-shadow: 0.1rem 0.1rem 50px var(--blue);
+}
+
+.recipe{
+    margin-top: 12rem;
+    margin-left: 4rem;
+    margin-right: 6rem;
+    position: relative;
+}
+
+.recipe .ellipse{
+    height: 50rem;
+    margin-left: 66rem;
+    margin-top: 5rem;
+    z-index: -999;
+    position: absolute;
+}
+
+.recipe .title-recipe{
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1.7rem;
+}
+
+.recipe .cards{
+    height: 24rem;
+    margin-top: 2rem;
+    display: flex;
+}
+/* 
+.recipe .cards::-webkit-scrollbar-track{
+    height: 0;
+} */
+
+.recipe .cards .menu{
+    height: 24rem;
+    width: 15rem;
+    margin-right: 1.5rem;
+    background-color: var(--blue);
+    border-radius: 0.6rem;
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.recipe .cards .menu:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.recipe .cards .menu .image-food{
+    height: 8rem;
+    width: 12.5rem;
+    margin: 1.2rem 1.2rem;
+    border-radius: 0.6rem;
+}
+
+.recipe .cards .menu .food{
+    margin: -0.5rem 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.recipe .cards .menu .info{
+    margin: 1.5rem 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1rem;
+}
+
+.recipe .cards .menu .button-recipe{
+    background-color: var(--red);
+    color: var(--white);
+    padding: 0.5rem 3rem;
+    margin: 0 1.2rem;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+.recipe .cards .menu .button-recipe:hover{
+    background-color: #931305;
+}
+
+.recipe2{
+    margin-top: 5rem;
+    margin-left: 4rem;
+    margin-right: 6rem;
+}
+
+.recipe2 .title-recipe{
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1.7rem;
+}
+
+.recipe2 .cards2{
+    height: 26rem;
+    margin-top: 2rem;
+    display: flex;
+}
+
+.recipe2 .cards2 .menu{
+    height: 26rem;
+    width: 15rem;
+    margin-right: 1.5rem;
+    background-color: var(--orange);
+    border-radius: 0.6rem;
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.recipe2 .cards2 .menu:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.recipe2 .cards2 .menu .type-food{
+    background-color: var(--blue);
+    margin: 1.2rem 1.2rem;
+    margin-bottom: -0.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0.3rem ;
+    border-radius: 0.3rem;
+}
+
+.recipe2 .cards2 .menu .image-food{
+    height: 8rem;
+    width: 12.5rem;
+    margin: 1.2rem 1.2rem;
+    border-radius: 0.6rem;
+}
+
+.recipe2 .cards2 .menu .food{
+    margin: -0.5rem 1.2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.recipe2 .cards2 .menu .info{
+    margin: 1.5rem 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1rem;
+}
+
+.recipe2 .cards2 .menu .button-recipe{
+    background-color: var(--white);
+    color: var(--black);
+    padding: 0.5rem 3rem;
+    margin: 0 1.2rem;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+.recipe2 .cards2 .menu .button-recipe:hover{
+    box-shadow: 0.1rem 0.1rem 50px var(--white);
+}
+
+/* Quote */
+.quote{
+    margin-top: 5rem;
+}
+
+.quote img{
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 27rem;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: -999;
+}
+
+.quote .text{
+    color: var(--white);
+    font-size: 6rem;
+    margin-top: -21rem;
+    margin-left: 4rem;
+    text-shadow: 
+      -3.5px -3.5px 0 var(--black),  
+       3.5px -3.5px 0 var(--black),
+      -3.5px  3.5px 0 var(--black),
+       3.5px  3.5px 0 var(--black);
+}
+
+.contact {
+    display: block;
+    margin-top: 9rem;
+    margin-left: 4rem;
+    margin-right: 6rem;
+    color: var(--white);
+    position: relative;
+}
+
+.contact h2{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.contact p{
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-top: 0.1rem;
+}
+
+.contact a{
+    margin-top: 6rem;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--green);
+    padding: 1rem 36%;
+    border-radius: 0.3rem;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.contact a:hover{
+    background-color: var(--blue);
+    transform: scale(1.01);
+    z-index: 2;
+    box-shadow: 0.1rem 0.1rem 50px var(--blue);
+}
+
+.image4{
+    margin-top: -3rem;
+    margin-left: 75%;
+    z-index: 999;
+    z-index: 0;
+    position: absolute;
+}
+
+footer{
+    margin-top: 6rem;
+    background-color: var(--red);
+    color: var(--white);
+    height: 100%;
+    z-index: 1;
+}
+
+footer .foot{
+    display: flex;
+    margin-left: 4rem;
+    margin-right: 6rem;
+}
+
+footer .foot h3{
+    font-size: 2.5rem;
+    text-wrap: nowrap;
+    margin-right: 9rem;
+    margin-top: 12rem;
+}
+footer .foot .we{
+    list-style-type: none;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+
+footer .foot .we li a{
+    display: flex;
+    color: var(--white);
+    text-decoration: none;
+    margin-top: 2rem;
+    transition: 0.3s;
+}
+
+footer .foot .we li a:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px){
+    html{
+        font-size: 85%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px){
+    html{
+        font-size: 75%;
+    }
+
+    ::-webkit-scrollbar{
+        width: 0;
+        height: 0;
+    }
+
+    #hamburger-menu{
+        display: inline-block;
+    }
+    
+    .navbar .navbar-nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #264653; 
+        width: 25rem;
+        height: 60vh;
+        box-shadow: -4px 5px 50px;
+        transition: 0.4s;
+    }
+
+    .navbar .navbar-nav.active{
+        right: 0;
+    }
+
+    .navbar .navbar-nav a{
+        display: block;
+        margin: 2.5rem;
+        padding: 0.1rem;
+        font-size: 1.7rem;
+    }
+
+    .navbar .navbar-nav a::after{
+        transform-origin: 0 0;
+    }
+
+    .hero .Title{
+        margin-right: 9rem;
+        margin-left: 4rem;
+    }
+
+    .hero .Title h1{
+        font-size: 6.7rem;
+    }
+
+    .hero .hero-right .image1{
+        display: none;
+    }
+
+    .hero .hero-right .button-health{
+        margin-top: 40rem;
+        margin-right: 0.5rem;
+        margin-left: -59rem;
+    }
+
+    .hero .hero-right .button-health p{
+        margin-left: 17rem;
+    }
+
+    .hero .hero-right .button-health a{
+        padding: 0.8rem 20rem;
+    }
+
+    .recipe .cards {
+        overflow-x: auto;
+    }
+
+    .recipe2 .cards2{
+        overflow-x: auto;
+    }
+
+    .recipe .ellipse{
+        display: none;
+    }
+
+    .quote .text{
+        margin-top: -20rem;
+        font-size: 5.5rem;
+    }
+
+    .contact h2{
+        font-size: 3rem;
+    }
+
+    .contact p{
+        font-size: 2rem;
+    }
+
+    .contact a{
+        font-size: 1.5rem;
+        margin-top: 5rem;
+    }
+
+    .image4{
+        display: none;
+    }
+
+    footer .foot .we li a{
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px){
+    html{
+        font-size: 55%;
+    }
+
+    .hero .Title{
+        margin-right: 0;
+        margin-left: 4rem;
+    }
+
+    .hero .Title h1{
+        font-size: 7rem;
+    }
+
+    .hero .hero-right .button-health{
+        margin-top: 42rem;
+        margin-right: 0rem;
+        margin-left: -43rem;
+    }
+
+    .hero .hero-right .button-health p{
+        margin-left:9rem ;
+    }
+
+    .hero .hero-right .button-health a{
+        padding: 1rem 12rem;;
+    }
+    
+    .quote .text{
+        margin-top: -24rem;
+        font-size: 5.3rem;
+    }
+
+    
+    .contact {
+        margin-top: 6rem ;
+    }
+
+    footer .foot{
+        display: inline;
+    }
+
+    footer .foot h3{
+        margin-left: 4rem;
+        margin-top: 4rem;
+    }
+
+    footer .foot .we {
+        margin-left: 4rem;
+    }
+
+    footer .foot .we li a{
+        font-size: 1.8rem;
+    }
+
+}

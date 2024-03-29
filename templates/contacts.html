@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimenta Mexico</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/contacts.css')}}">
+</head>
+<body>
+    <!-- Navbar start -->
+    <nav class="navbar">
+        <a href="/" class="navbar-logo">#Alimenta<span class="Me">Me</span><span class="xi">xi</span><span class="co">co</span></a>
+
+        <div class="navbar-nav">
+            <a href="#over-health">For Over-Health Bar</a>
+            <a href="#under-health">For Under-Health Bar</a>
+        </div>
+
+        <div class="navbar-extra">
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Main start -->
+    <a href="/" class="back"><i data-feather="arrow-left"></i></a>
+    <section class="contacts-pro">
+        <img src="assets/img/Ellipse10.png" alt="" class="ellipse">
+        <div class="main-pro">
+            <h1>Health Proffesional Contacts</h1>
+            <div class="person">
+                <a href="#" class="food-pro1"><li>Food Specialist</li></a>
+                <a href="#" class="pro-doctor"><li>Common Doctors</li></a>
+                <a href="#" class="food-pro2"><li>Food Specialist</li></a>
+            </div>
+        </div>
+    </section>
+    <!-- Main End -->
+
+    <!-- Footer start -->
+    <footer>
+        <div class="foot">
+            <h3>About Us</h3>
+            <div class="we">
+                <li><a href="https://www.linkedin.com/in/satwika-wandhana-0a43a02b0/">Satwika Nino Wandhana - CyberSecurity</a></li>
+                <li><a href="https://www.linkedin.com/in/kenbimasatriagandasasmita/">Ken Bima Satria Gandasasmita - UI/UX</a></li>
+                <li><a href="https://www.linkedin.com/in/wibi-laksono-wijaya-4139672b6/">Wibi Laksono Wijaya - Front End</a></li>
+                <li><a href="https://www.linkedin.com/in/joseph-greffen-komala-ab1848293/">Joseph Greffen Komala - DSAI</a></li>
+                <li><a href="http://www.linkedin.com/in/mutiara-setya-rini">Mutiara Setyarini - GameDev</a></li>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script>
+        feather.replace();
+      </script>
+
+      <script src="{{url_for('static',filename='js/script.js')}}"></script>
+</body>
+</html>

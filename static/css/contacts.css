@@ -1,0 +1,295 @@
+:root{
+    --black: #16151D;
+    --red: #D51E0B;
+    --green: #34685C;
+    --blue: #264653;
+    --orange: #EF7401;
+    --white: #ECF0F3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif ;
+    background-color: var(--black);
+}
+
+::-webkit-scrollbar{
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--black);
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#34685C, #264653);
+    border-radius: 1rem;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 99999;
+    padding: 2rem;
+    padding-left: 6%;
+    background-color: var(--black);
+    box-shadow: 1px 4px 30px;
+}
+
+.navbar .navbar-logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.Me{
+    color: var(--red);
+}
+
+.xi{
+    color: var(--green);
+}
+
+.co{
+    color: var(--orange);
+}
+
+.navbar .navbar-nav{
+    margin-left: 20%;
+}
+
+.navbar .navbar-nav a{
+    color: var(--white);
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    margin: 0 0.6rem;
+}
+
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.3rem;
+    border-bottom: 0.01rem solid var(--white);
+    transform: scaleX(0);
+    transition: 0.3s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(0.7);
+}
+
+.navbar .navbar-extra{
+    margin-right: 3%;
+}
+
+.navbar .navbar-extra a{
+    color: var(--white);
+}
+
+#hamburger-menu{
+    display: none;
+}
+
+/* Main */
+
+body .back{
+    margin-top: -3rem;
+    margin-left: 3rem;
+    color: var(--white);
+    position: absolute;
+}
+.contacts-pro{
+    margin-top: 12rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    position: relative;
+}
+
+.contacts-pro .ellipse{
+    height: 50rem;
+    margin-left: 80rem;
+    margin-top: 5rem;
+    z-index: -999;
+    position: absolute;
+}
+
+.contacts-pro .main-pro{
+    margin-left: 4rem;
+    margin-right: 6rem;
+    padding-bottom: 20rem;
+    color: var(--white);
+}
+
+.contacts-pro .main-pro h1{
+    font-size: 4rem;
+}
+
+.contacts-pro .main-pro .person{
+    list-style-type: none;
+}
+
+.contacts-pro .main-pro .person a{
+    display: flex;
+    margin-top: 2rem;
+    color: var(--white);
+    font-size: 1.5rem;
+    justify-content: center;
+    padding: 1.5rem ;
+    border-radius: 0.3rem;
+}
+
+.contacts-pro .main-pro .person .food-pro1{
+    background-color: var(--green);
+}
+
+.contacts-pro .main-pro .person .pro-doctor{
+    background-color: var(--blue);
+}
+
+.contacts-pro .main-pro .person .food-pro2{
+    background-color: var(--red);
+}
+
+/* Footer */
+footer{
+    margin-top: 6rem;
+    background-color: var(--red);
+    color: var(--white);
+    height: 100%;
+    z-index: 1;
+}
+
+footer .foot{
+    display: flex;
+    margin-left: 4rem;
+    margin-right: 6rem;
+}
+
+footer .foot h3{
+    font-size: 2.5rem;
+    text-wrap: nowrap;
+    margin-right: 9rem;
+    margin-top: 12rem;
+}
+footer .foot .we{
+    list-style-type: none;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+}
+
+footer .foot .we li a{
+    display: flex;
+    color: var(--white);
+    text-decoration: none;
+    margin-top: 2rem;
+}
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px){
+    html{
+        font-size: 85%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px){
+    html{
+        font-size: 75%;
+    }
+
+    ::-webkit-scrollbar{
+        width: 0;
+        height: 0;
+    }
+
+    #hamburger-menu{
+        display: inline-block;
+    }
+    
+    .navbar .navbar-nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #264653; 
+        width: 25rem;
+        height: 60vh;
+        box-shadow: -4px 5px 50px;
+        transition: 0.4s;
+    }
+
+    .navbar .navbar-nav.active{
+        right: 0;
+    }
+
+    .navbar .navbar-nav a{
+        display: block;
+        margin: 2.5rem;
+        padding: 0.1rem;
+        font-size: 1.7rem;
+    }
+
+    .navbar .navbar-nav a::after{
+        transform-origin: 0 0;
+    }
+
+    .contacts-pro .ellipse{
+        display: none;
+    }
+
+    .contacts-pro .main-pro .person a{
+        padding: 1.5rem 4rem;
+    }
+
+    footer .foot .we li a{
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px){
+    html{
+        font-size: 55%;
+    }
+
+    ::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    .contacts-pro .main-pro h1{
+        font-size: 3rem;
+    }
+
+    footer .foot{
+        display: inline;
+    }
+
+    footer .foot h3{
+        margin-left: 4rem;
+        margin-top: 4rem;
+    }
+
+    footer .foot .we {
+        margin-left: 4rem;
+    }
+
+    footer .foot .we li a{
+        font-size: 1.8rem;
+    }
+
+}
