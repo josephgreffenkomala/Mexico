@@ -4,6 +4,9 @@ import pandas as pd
 import numpy as np
 app=Flask(__name__)
 # df=pd.read_csv("dia.csv")
+
+
+
 model=pickle.load(open("model.pkl","rb"))
 scaler=pickle.load(open("scaler.pkl","rb"))
 
